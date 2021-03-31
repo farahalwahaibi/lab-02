@@ -8,38 +8,48 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/layouts.css">
     <link rel="stylesheet" href="./css/modules.css">
-    <script id='divTemplate' type='text/x-tmpl-mustache'>
-        <div id="photo-template2">
+    <!--to create template using mustache-->
+    <script id='galleryTemplate' type='text/x-tmpl-mustache'>
+        <div  class={{keyword}} id="templatediv"> 
             <h2>{{title}}</h2>
-            <img src='{{image_url}}' alt='{{image_url}}'> 
+            <img src='{{imageUrl}}' alt='{{imageUrl}}'> 
             <p>{{description}}<p>
         </div>
-    </script> 
-    <!--ask mostafa for image_url-->
+    </script>
 </head>
 
 <body>
     <header>
         <h1>The Gallery of Horns</h1>
-        <select>
-            <option value="default">Filter Keyword</option>
+        <br>
+        <br>
+        <select class="dropdownList">
+            <!--we call the select in app.js to clone the option-->
+            <option value="default" class="list">Filter Keyword</option>
         </select>
         <br>
-        <button type="button" id="page1">page 1</button>
-        <button type="button" id="page2">page 2</button>
+        <br>
+        <section class="button">
+            <button type="button" id="page1" class="but">page 1</button>
+            <!--button for page1-->
+            <button type="button" id="page2" class="but">page 2</button>
+            <!--button for page1-->
+        </section>
     </header>
     <main>
-        <div id="photo-template">
+        <!-- <div id="photo-template">
             <h2></h2>
             <img src="" alt="">
             <p></p>
-        </div>
+        </div> -->
     </main>
     <footer>
-        &copy; 2018 Code Fellows
+        &copy; 2021 Code Fellows
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--for jQuery, put it before all-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
+    <!--for mustache-->
     <script src="./js/app.js"></script>
 </body>
 
