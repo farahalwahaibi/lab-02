@@ -1,9 +1,9 @@
 'use strict';
 
-// global array to push the keyword inside it:
+// Global array to push the keyword inside it:
 let keyword = [];
 
-// main constructor:
+// Main constructor:
 function Option(optionPar) {
     this.imageUrl = optionPar.image_url;
     this.title = optionPar.title;
@@ -38,7 +38,7 @@ function checkGallery() {
     });
 }
 
-//Get data from page-1 to render the default page:
+// Get data from page-1 to render the default page:
 $.ajax('./Data/page-1.json')
     .then(data => {
         data.forEach(val => {
